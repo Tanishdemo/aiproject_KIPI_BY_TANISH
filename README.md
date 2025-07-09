@@ -31,7 +31,13 @@ This Python-based project provides an intelligent assistant that:
 - A **Snowflake account** with access credentials
 - A **Google Cloud API key** with access to the **Generative Language API (Gemini)**
 
+
+
 ### 2. 📦 Install Dependencies
 
 ```bash
 pip install google-generativeai snowflake-connector-python sqlparse
+
+To run this use power shell
+$env:GOOGLE_API_KEY = ""
+python .\main.py
