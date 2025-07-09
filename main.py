@@ -13,12 +13,12 @@ except KeyError:
     exit()
 
 # Snowflake credentials
-SNOWFLAKE_ACCOUNT = "zbymzkr-jmb03693"
-SNOWFLAKE_USER = 'tanish123'
-SNOWFLAKE_PASSWORD = 'Boomchika@#123'
-SNOWFLAKE_WAREHOUSE = 'COMPUTE_WH'
-SNOWFLAKE_DATABASE = 'GARDEN_PLANTS'
-SNOWFLAKE_SCHEMA = 'FRUITS'
+SNOWFLAKE_ACCOUNT = ""
+SNOWFLAKE_USER = ''
+SNOWFLAKE_PASSWORD = ''
+SNOWFLAKE_WAREHOUSE = ''
+SNOWFLAKE_DATABASE = ''
+SNOWFLAKE_SCHEMA = ''
 
 # --- FUNCTIONS ---
 
@@ -37,7 +37,7 @@ def explain_sql(sql):
     """Explains an SQL query using Google's Gemini model."""
     prompt = f"Explain the following SQL query in simple English:\n{sql}"
     try:
-        # CORRECTED: Use a current model name
+      
         model = genai.GenerativeModel('gemini-1.5-flash')
         response = model.generate_content(prompt)
         return response.text
